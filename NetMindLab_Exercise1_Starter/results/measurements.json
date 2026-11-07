@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "group_id": "NML-Gxxx",
+  "timestamp_utc": null,
+  "host": {
+    "hostname": null,
+    "os": null,
+    "ipv4": null,
+    "subnet_mask": null,
+    "default_gateway": null
+  },
+  "measurements": {
+    "ping": [],
+    "traceroute": null
+  },
+  "delay_models": {
+    "processing_s": 0.0005,
+    "queueing_s": 0.001,
+    "transmission_s": null,
+    "propagation_s": null,
+    "nodal_s": null
+  },
+  "summary": null
+}

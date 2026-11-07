@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "exercise_id": "NET-EX1-2026",
+  "group_id": "NML-Gxxx",
+  "genai_tool": "",
+  "genai_task_type": "",
+  "prompt_excerpt": "",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "",
+      "initial_confidence_1_to_5": null,
+      "evidence_type": "",
+      "evidence_reference": "",
+      "verification_result": "",
+      "challenged_ai": null,
+      "follow_up_question_asked": null,
+      "interpretation_changed_after_verification": null,
+      "final_confidence_1_to_5": null,
+      "final_decision": "",
+      "justification": ""
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "",
+      "initial_confidence_1_to_5": null,
+      "evidence_type": "",
+      "evidence_reference": "",
+      "verification_result": "",
+      "challenged_ai": null,
+      "follow_up_question_asked": null,
+      "interpretation_changed_after_verification": null,
+      "final_confidence_1_to_5": null,
+      "final_decision": "",
+      "justification": ""
+    }
+  ],
+  "conflict_with_own_evidence_observed": null,
+  "conflict_resolution": "",
+  "uncertainty_identified": null,
+  "uncertainty_description": "",
+  "additional_evidence_requested": null,
+  "additional_evidence_needed": "",
+  "overall_reflection": ""
+}
