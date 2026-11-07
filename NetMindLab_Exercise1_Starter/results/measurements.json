@@ -1,24 +1,118 @@
 {
   "schema_version": "1.0",
-  "group_id": "NML-Gxxx",
-  "timestamp_utc": null,
+  "group_id": "NML-G001",
+  "timestamp_utc": "2026-11-07T14:36:24.031848+00:00",
   "host": {
-    "hostname": null,
-    "os": null,
-    "ipv4": null,
-    "subnet_mask": null,
-    "default_gateway": null
+    "hostname": "DESKTOP-3OF0N9E",
+    "os": "Windows",
+    "ipv4": "192.168.1.217",
+    "subnet_mask": "255.255.255.0",
+    "default_gateway": "192.168.1.1"
   },
   "measurements": {
-    "ping": [],
-    "traceroute": null
+    "ping": [
+      {
+        "target": "example.com",
+        "command": "ping",
+        "exit_code": 0,
+        "raw_output": "\nPinging example.com [2606:4700:10::ac42:93f3] with 32 bytes of data:\nReply from 2606:4700:10::ac42:93f3: time=7ms \nReply from 2606:4700:10::ac42:93f3: time=6ms \nReply from 2606:4700:10::ac42:93f3: time=5ms \nReply from 2606:4700:10::ac42:93f3: time=5ms \n\nPing statistics for 2606:4700:10::ac42:93f3:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 7ms, Average = 5ms\n",
+        "error": "",
+        "rtt_ms": [
+          7.0,
+          6.0,
+          5.0,
+          5.0
+        ],
+        "packet_loss_pct": 0.0,
+        "min_rtt_ms": 5.0,
+        "avg_rtt_ms": 5.75,
+        "max_rtt_ms": 7.0
+      },
+      {
+        "target": "1.1.1.1",
+        "command": "ping",
+        "exit_code": 0,
+        "raw_output": "\nPinging 1.1.1.1 with 32 bytes of data:\nReply from 1.1.1.1: bytes=32 time=10ms TTL=60\nReply from 1.1.1.1: bytes=32 time=6ms TTL=60\nReply from 1.1.1.1: bytes=32 time=6ms TTL=60\nReply from 1.1.1.1: bytes=32 time=8ms TTL=60\n\nPing statistics for 1.1.1.1:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 6ms, Maximum = 10ms, Average = 7ms\n",
+        "error": "",
+        "rtt_ms": [
+          10.0,
+          6.0,
+          6.0,
+          8.0
+        ],
+        "packet_loss_pct": 0.0,
+        "min_rtt_ms": 6.0,
+        "avg_rtt_ms": 7.5,
+        "max_rtt_ms": 10.0
+      }
+    ],
+    "traceroute": {
+      "target": "example.com",
+      "command": "traceroute",
+      "exit_code": 0,
+      "raw_output": "\nTracing route to example.com [2606:4700:10::ac42:93f3]\nover a maximum of 12 hops:\n\n  1     3 ms     3 ms     3 ms  2a0d:6fc0:2380:8700::1 \n  2     5 ms     5 ms     5 ms  2a0d:6fc0:fff:ffff:ffff:ffff:ffff:ff30 \n  3     *        *        *     Request timed out.\n  4     5 ms     6 ms     5 ms  2001:40a8:4400:1b::1 \n  5     5 ms     5 ms     5 ms  2606:4700:10::ac42:93f3 \n\nTrace complete.\n",
+      "error": "",
+      "hops": [
+        {
+          "hop": 1,
+          "address": "2a0d:6fc0:2380:8700::1",
+          "rtt_ms": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "rtt_below_1ms_count": 0,
+          "timeout": false
+        },
+        {
+          "hop": 2,
+          "address": "2a0d:6fc0:fff:ffff:ffff:ffff:ffff:ff30",
+          "rtt_ms": [
+            5.0,
+            5.0,
+            5.0
+          ],
+          "rtt_below_1ms_count": 0,
+          "timeout": false
+        },
+        {
+          "hop": 3,
+          "address": null,
+          "rtt_ms": [],
+          "rtt_below_1ms_count": 0,
+          "timeout": true
+        },
+        {
+          "hop": 4,
+          "address": "2001:40a8:4400:1b::1",
+          "rtt_ms": [
+            5.0,
+            6.0,
+            5.0
+          ],
+          "rtt_below_1ms_count": 0,
+          "timeout": false
+        },
+        {
+          "hop": 5,
+          "address": "2606:4700:10::ac42:93f3",
+          "rtt_ms": [
+            5.0,
+            5.0,
+            5.0
+          ],
+          "rtt_below_1ms_count": 0,
+          "timeout": false
+        }
+      ]
+    }
   },
   "delay_models": {
     "processing_s": 0.0005,
     "queueing_s": 0.001,
-    "transmission_s": null,
-    "propagation_s": null,
-    "nodal_s": null
+    "transmission_s": 0.0012,
+    "propagation_s": 0.0005,
+    "nodal_s": 0.0031999999999999997
   },
-  "summary": null
+  "summary": "Network Measurement Summary\nPing target: example.com\nRTT: min=5.00 ms, avg=5.75 ms, max=7.00 ms\nPacket loss: 0.00%\nPing target: 1.1.1.1\nRTT: min=6.00 ms, avg=7.50 ms, max=10.00 ms\nPacket loss: 0.00%\nTraceroute to example.com: 5 hops recorded.\nHops with missing responses: 1\nHop 1: 2a0d:6fc0:2380:8700::1, RTT=[3.0, 3.0, 3.0], response recorded\nHop 2: 2a0d:6fc0:fff:ffff:ffff:ffff:ffff:ff30, RTT=[5.0, 5.0, 5.0], response recorded\nHop 3: unknown, RTT=[], partial/timeout\nHop 4: 2001:40a8:4400:1b::1, RTT=[5.0, 6.0, 5.0], response recorded\nHop 5: 2606:4700:10::ac42:93f3, RTT=[5.0, 5.0, 5.0], response recorded\nDelay model:\nprocessing_s: 0.000500 seconds\nqueueing_s: 0.001000 seconds\ntransmission_s: 0.001200 seconds\npropagation_s: 0.000500 seconds\nnodal_s: 0.003200 seconds"
 }
